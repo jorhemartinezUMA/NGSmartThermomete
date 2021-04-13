@@ -1,0 +1,85 @@
+<mat-card class="entries-card">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title>Staff Entries</mat-card-title>
+    <mat-card-subtitle>This table shows the last measure of every user. Administrator only</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content class="full-width">
+
+    <table mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="name" class="column">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td  mat-cell *matCellDef="let entry" routerLink="/user/{{entry.state.ID}}" class="clickable" >{{ entry.state.name }}</td>
+        
+      </ng-container>
+
+      <ng-container matColumnDef="temperature" class="column">
+        <th mat-header-cell *matHeaderCellDef> Temperature </th>
+        <td mat-cell *matCellDef="let entry">{{ entry.state.temperature }} ºC</td>
+        
+      </ng-container>
+
+      <ng-container matColumnDef="timestamp" class="column">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let entry">{{ entry.state.timestamp }}</td>
+        
+      </ng-container>
+
+      <ng-container matColumnDef="active" class="column">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let entry">
+          <ng-container *ngIf="entry.alert.active == true">
+            <mat-icon [inline]= "true" aria-hidden="false" aria-label="Header icon" id="alert" mat-raised-button
+            matTooltip="{{entry.state.name}} was measured with {{entry.alert.temperature}} ºC on {{entry.alert.timestamp}} and should have 2 weeks of quarantine">warning</mat-icon>
+          </ng-container>
+
+        </td>
+        
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+  </mat-card-content>
+</mat-card>
+
+<p class="switch-element">
+  <mat-card class="switch-card">
+    <mat-card-header>
+      <div mat-card-avatar class="switch-image"></div>
+      <mat-card-title>
+        <button mat-flat-button class="switch-button" routerLink="/user/{{global.logUser.user.ID}}">PERSONAL VIEW</button>
+      </mat-card-title>
+    </mat-card-header>
+</mat-card>
+</p>
+
+
+
+<!-- <h2>Entries</h2>
+<ul class="entries">
+    <table>
+        <thead>
+          <th>ID</th>
+          <th>Temperature</th>
+          <th>Date</th>
+          <th>Alert</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entry of showEntries">
+            <td routerLink="/user/{{entry.state.ID}}">{{entry.state.name}}</td>
+            <td>{{entry.state.temperature}}</td>
+            <td>{{entry.state.timestamp}}</td>
+            <td *ngIf="entry.alert.active == true"
+              mat-raised-button
+              matTooltip="{{entry.state.name}} was measured with {{entry.alert.temperature}} on {{entry.alert.timestamp}} and should have 2 weeks of quarenteen">
+              Alert</td>
+          </tr>
+        </tbody>
+      </table> -->
+
+    

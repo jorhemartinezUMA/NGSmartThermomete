@@ -1,0 +1,142 @@
+<p>
+    <mat-toolbar class="user-toolbar">
+      <span>{{selectedUser.user.name}}</span>
+    </mat-toolbar>
+  </p>
+<nav class="cards">
+  <p class="last-element">
+    <mat-card class="last-card">
+      <mat-card-header>
+        <div mat-card-avatar class="last-image"></div>
+        <mat-card-title>Last Measure</mat-card-title>
+        <mat-card-subtitle>This is the last measured temperature of {{selectedUser.user.name}}</mat-card-subtitle>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <p class="temp">
+          {{ lastEntry.state.temperature }} ºC
+        </p>
+  
+        <p class="date">Date: </p>
+        <p class="time">
+          {{ lastEntry.state.timestamp }}
+        </p>
+  
+      </mat-card-content>
+  </mat-card>
+  </p>
+  
+  <p class="max-element">
+    <mat-card class="max-card">
+      <mat-card-header>
+        <div mat-card-avatar class="max-image"></div>
+        <mat-card-title>Maximum Measure</mat-card-title>
+        <mat-card-subtitle>This is the maximum measured temperature of {{selectedUser.user.name}}</mat-card-subtitle>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <p class="temp">
+          {{ maxEntry.state.temperature }} ºC
+        </p>
+        <p class="date">Date: </p>
+        <p class="time">
+          {{ maxEntry.state.timestamp }}
+        </p>
+        
+      </mat-card-content>
+  </mat-card>
+  </p>
+  
+  <p *ngIf="alrt.active == true" class="alert-element">
+    <mat-card class="alert-card">
+      <mat-card-header>
+        <div mat-card-avatar class="alert-image"></div>
+        <mat-card-title class="alert-title">Warning</mat-card-title>
+        <mat-card-subtitle>For more information: 
+          <a href='https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/advice-for-public/q-a-coronaviruses'>
+            https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019/advice-for-public/q-a-coronaviruses
+          </a>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="warn-info">
+          On {{ alrt.timestamp}}, {{ selectedUser.user.name }} was measured with {{ alrt.temperature }} ºC
+        </p>
+        <p class="quar">
+          Two weeks quarantine is required. The doctor shall be informed with further symptoms.
+        </p>
+      </mat-card-content>
+  </mat-card>
+  </p>
+  
+  
+</nav>
+<div class="buttons">
+  <p class="goback-element" *ngIf="global.logUser.user.admin==true">
+    <mat-card class="goback-card">
+      <mat-card-header>
+        <div mat-card-avatar class="goback-image" (click)="goBack()"></div>
+        <mat-card-title>
+          <button mat-flat-button class="goback-button" (click)="goBack()">GO BACK</button>
+        </mat-card-title>
+      </mat-card-header>
+  </mat-card>
+  </p>
+  
+  <p class="switch-element" *ngIf="(global.logUser.user.admin==true)&&(global.logUser.user.ID==id)">
+    <mat-card class="switch-card">
+      <mat-card-header>
+        <div mat-card-avatar class="switch-image"></div>
+        <mat-card-title>
+          <button mat-flat-button class="switch-button" routerLink="/entries">ADMIN VIEW</button>
+        </mat-card-title>
+      </mat-card-header>
+  </mat-card>
+  </p>
+</div>
+
+
+<!-- <h2> {{selectedUser.user.name}}</h2>
+<ul class="heroes">
+    <table>
+        <thead>
+          <th>ID</th>
+          <th>Temperature</th>
+          <th>Date</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Last Entry</td>
+            <td>{{lastEntry.state.temperature}}</td>
+            <td>{{lastEntry.state.timestamp}}</td>
+          </tr>
+          <tr>
+            <td>Max Entry</td>
+            <td>{{maxEntry.state.temperature}}</td>
+            <td>{{maxEntry.state.timestamp}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <thead>
+          <th>ID</th>
+          <th>admin</th>
+          <th>email</th>
+          <th>name</th>
+          <th>password</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{selectedUser.user.ID}}</td>
+            <td>{{selectedUser.user.admin}}</td>
+            <td>{{selectedUser.user.email}}</td>
+            <td>{{selectedUser.user.name}}</td>
+            <td>{{selectedUser.user.password}}</td>
+          </tr>
+        </tbody>
+      </table>
+    <div *ngIf="alrt.active == true">{{selectedUser.user.name}} was measured with {{alrt.temperature}} on {{alrt.timestamp}} and should have 2 weeks of quarenteen</div>
+<div *ngIf="global.loguser.user.admin==true" class="goback-button">
+  <button (click)="goBack()">go back</button>
+</div>
+<div *ngIf="(global.logUser.user.admin==true)&&(global.logUser.user.ID==id)" routerLink="/entries">Admin View </div> -->

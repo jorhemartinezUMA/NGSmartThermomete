@@ -1,0 +1,18 @@
+.login-card{
+    width: 400px;
+    margin-left: 300px;
+    margin-top: 100px;
+    justify-self: center;
+    background-color: rgba(248, 248, 255, 0.87);
+}
+
+.full-width{
+    width:100%
+}
+
+.header-image {
+    background-image: url('https://img.icons8.com/material/96/000000/enter-2--v2.png');
+    background-size: cover;
+  }
+
+

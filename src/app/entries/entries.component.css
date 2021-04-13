@@ -1,0 +1,64 @@
+.clickable{
+    cursor:pointer;
+}
+
+.alert{
+    font-size: larger;
+}
+
+.entries-card{
+    width: max-content;
+    margin-left: 200px;
+    justify-self: center;
+    background-color: rgba(248, 248, 255, 0.87);
+}
+
+
+th {
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+
+
+.mat-header-cell {
+    font-size:large;
+    font-weight: bolder;
+    padding: 15px;
+}
+
+.mat-cell{
+    font-size: medium;
+    padding:15px;
+}
+
+.header-image {
+    background-image: url('https://img.icons8.com/material/96/000000/user-menu-male--v1.png');
+    background-size: cover;
+  }
+
+.switch-card{
+    width: max-content;
+    background-color: rgba(248, 248, 255, 0.87);
+    align-content: left;
+
+    position:fixed;
+    bottom: 20px;
+}
+
+.switch-image{
+    background-image: url('https://img.icons8.com/material/96/000000/change-user-male.png');
+    background-size: cover;
+}
+
+.switch-button{
+    background-color: #e2c04496;
+}
+
+.switch-element{
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+}

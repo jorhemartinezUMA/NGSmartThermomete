@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+    <body>
+        <h1>
+            <mat-icon [inline]= "true" aria-hidden="false" aria-label="Header icon" id="header">coronavirus</mat-icon>
+            {{title}}
+        </h1>
+        <p class="user-element" *ngIf="login==true">
+            <mat-card class="user-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="user-image"></div>
+                    <mat-card-title>{{logUser.user.name}}</mat-card-title>
+                    <mat-card-subtitle>{{logUser.user.email}}</mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-actions class="button-element">
+                    <button mat-flat-button class="logout-button" *ngIf="login == true" (click)="logout()">
+                        <mat-icon [inline]= "true" aria-hidden="false" aria-label="Header icon" id="header">power_settings_new</mat-icon>
+                        LOGOUT </button>
+                </mat-card-actions>
+            </mat-card>
+        </p>
+        <router-outlet></router-outlet>
+    </body>
+</html>
+<!-- <a routerLink="/entries">Entries </a>
+<a routerLink="/login">LogIn</a> -->
+
+<!-- <i class="button-element">
+    <button mat-flat-button class="logout-button" *ngIf="login == true" (click)="logout()">
+        <mat-icon [inline]= "true" aria-hidden="false" aria-label="Header icon" id="header">power_settings_new</mat-icon>
+        Logout </button>
+    </i> -->
+    

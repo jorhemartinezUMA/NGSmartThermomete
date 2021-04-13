@@ -1,0 +1,30 @@
+.button-element{
+    text-align: right;
+}
+
+.logout-button{
+    background-color: #e2c04496;
+}
+
+table {
+    width:100%;
+}
+
+.user-image{
+    background-image: url(https://img.icons8.com/material/96/000000/user-location.png);
+    background-size: cover;
+}
+
+.user-card{
+    width: max-content;
+    background-color: rgba(248, 248, 255, 0.87);
+    align-content: right;
+}
+
+.user-element {
+    
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+
+}

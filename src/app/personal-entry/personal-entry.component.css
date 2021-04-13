@@ -1,0 +1,162 @@
+.user-toolbar{
+    background-color: #D3D0CB;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+}
+
+.last-card{
+    display: inline-block;
+
+    width: max-content;
+    background-color: rgba(248, 248, 255, 0.87);
+    align-content: right;
+
+    padding-left: 15px;
+
+
+
+}
+
+.last-image{
+    background-image: url('https://img.icons8.com/material-sharp/96/000000/love-time.png');
+    background-size: cover;
+}
+
+.last-button{
+    background-color: #e2c04496;
+}
+
+.last-element{
+    padding-left: 20px;
+}
+
+.max-card{
+    display: inline-block;
+
+    width: max-content;
+    background-color: rgba(248, 248, 255, 0.87);
+    align-content: right;
+
+    padding-left: 15px;
+
+
+}
+
+.max-image{
+    background-image: url('https://img.icons8.com/material-sharp/96/000000/thermometer.png');
+    background-size: cover;
+}
+
+.max-button{
+    background-color: #e2c04496;
+}
+
+.max-element{
+    padding-left: 20px;
+}
+
+.temp{
+    padding-top: 10px;
+    text-align: center;
+    font-size:50px;
+    font-weight: bold;
+}
+
+.date{
+    padding-top: 10px;
+    text-align:left;
+    font-size: 15px;
+    padding-left: 25px;
+}
+
+.time{
+    padding-top: 5px;
+    text-align: right;
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+.warn-info{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.quar{
+    color: firebrick;
+}
+.alert-card{
+    display: inline-block;
+
+    width: max-content;
+    background-color: rgba(248, 248, 255, 0.87);
+    align-content: right;
+
+    padding-right: 20px;
+}
+
+.alert-image{
+    background-image: url('https://img.icons8.com/material-sharp/24/000000/error--v1.png');
+    background-size: cover;
+}
+
+.alert-button{
+    background-color: #e2c04496;
+}
+
+.alert-element{
+    padding-left: 20px;
+}
+
+.buttons{
+    padding-top: 25px;
+}
+
+.goback-card{
+    width: max-content;
+    background-color: rgba(248, 248, 255, 0.87);
+    align-content: right;
+
+    bottom: 20px;
+}
+
+.goback-image{
+    background-image: url('https://img.icons8.com/material-sharp/96/000000/circled-chevron-left.png');
+    background-size: cover;
+}
+
+.goback-button{
+    background-color: #e2c04496;
+}
+
+.goback-element{
+    justify-content: left;
+    padding-left: 20px;
+}
+
+.switch-card{
+    width: max-content;
+    background-color: rgba(248, 248, 255, 0.87);
+    align-content: left;
+
+    position:fixed;
+    bottom: 20px;
+}
+
+.switch-image{
+    background-image: url('https://img.icons8.com/material-sharp/96/000000/admin-settings-male.png');
+    background-size: cover;
+}
+.switch-button{
+    background-color: #e2c04496;
+}
+
+.switch-element{
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+}
+
+
+
